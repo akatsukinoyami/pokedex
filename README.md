@@ -1,4 +1,4 @@
-# PokeSvelte
+# PokeDex Svelte
 
 Small application, that shows list of pokemons and can show extended info about one of them. Application have search, pagination and assets compression. You can try it [here](https://pokedex.katsu.moe).
 
