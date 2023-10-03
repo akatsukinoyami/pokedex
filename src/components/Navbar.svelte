@@ -13,14 +13,11 @@
           width="112" height="28">
     </a>
 
-    <a 
-      role="button" class="navbar-burger"
-      on:click={() => is_active= !is_active }
-    >
+    <button class="navbar-burger" on:click={() => is_active= !is_active }>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
-    </a>
+    </button>
   </div>
 
   <div class="navbar-menu {is_active ? "is-active" : ""}">
@@ -31,6 +28,18 @@
           <Search />
         </div>
       {/if}
+      <div class="navbar-item">
+        <a href="https://github.com/akatsukinoyami/pokedex">
+          <img 
+            src="https://cdn-icons-png.flaticon.com/512/25/25231.png" 
+            class="image is-32x32 is-max-height-100" alt="GitHub Logo"/>
+        </a>
+      </div>
     </div>
   </div>
 </nav>
+
+<style lang="sass">
+  .is-max-height-100
+    max-height: 100% !important
+</style>
