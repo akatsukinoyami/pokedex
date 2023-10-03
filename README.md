@@ -73,9 +73,3 @@ Small application, that shows list of pokemons and can show extended info about 
 | <img src="https://static-00.iconduck.com/assets.00/docker-icon-512x438-ga1hb37h.png" height="16" />                               | [Docker](https://www.docker.com)                 | Container building, storing and running engine                 |
 | <img src="https://static-00.iconduck.com/assets.00/nginx-icon-444x512-0meva297.png" height="16" />                                | [Nginx](https://www.nginx.com)                   | The most common open source web server                         |
 | <img src="https://caprover.com/img/logo-padded.png" height="16" />                                                                | [Caprover](https://caprover.com)                 | Open Source PaaS (for deployment)                              |
-
-<style>
-    table {
-        width: 100%;
-    }
-</style>
