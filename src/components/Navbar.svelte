@@ -23,12 +23,10 @@
   <div class="navbar-menu {is_active ? "is-active" : ""}">
     <div class="navbar-start"></div>
     <div class="navbar-end">
-      {#if location.pathname === "/"}
-        <div class="navbar-item">
+      <div class="navbar-item is-flex is-justify-content-flex-end is-align-items-center">
+        {#if location.pathname === "/"}
           <Search />
-        </div>
-      {/if}
-      <div class="navbar-item">
+        {/if}
         <a href="https://github.com/akatsukinoyami/pokedex">
           <img 
             src="https://cdn-icons-png.flaticon.com/512/25/25231.png" 
