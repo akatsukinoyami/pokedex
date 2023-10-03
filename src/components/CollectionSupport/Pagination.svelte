@@ -4,10 +4,11 @@
   import { POKEMON_LIST_1x } from "../../constants";
   import { countStore, pageStore, pageSizeStore } from "../../stores";
   
-  let 
-    page: number, 
+  export let 
+    className = "", 
+    page = 0, 
     pageSize = POKEMON_LIST_1x, 
-    countOfPokemons: number = 1281; // default number before load data from backend
+    countOfPokemons = 1281; // default number before load data from backend
 
   const unsubscribes = [
     pageStore.subscribe(value => page = value),
@@ -20,14 +21,18 @@
   onDestroy(() => runAll(unsubscribes));
 </script>
 
-<nav class="pagination" aria-label="pagination">
+<nav class="pagination mt-2 {className}" aria-label="pagination">
   {#if page > 0}
-    <button class="button pagination-previous" on:click={ () => pageStore.set(page-1) }>Previous page</button>
+    <button class="button pagination-previous" on:click={ () => pageStore.set(page-1) }>&#10094;</button>
   {/if}
+  
+  <button class="button pagination-link is-current" aria-label="Page { page+1 } of { last }" aria-current="page">{ page+1 } of { last }</button>
+  
   {#if page < last-1}
-    <button class="button pagination-next" on:click={ () => pageStore.set(page+1) }>Next page</button>
+    <button class="button pagination-next" on:click={ () => pageStore.set(page+1) }>&#10095;</button>
   {/if}
 
+  <!--
   <ul class="pagination-list">
     {#if page > 1}<li><button class="button pagination-link" aria-label="Goto page 1" on:click={() => pageStore.set(0) }>1</button></li>{/if}
     {#if page > 2}<li><span class="pagination-ellipsis">&hellip;</span></li>{/if}
@@ -39,5 +44,5 @@
     {#if page < last-3}<li><span class="pagination-ellipsis">&hellip;</span></li>{/if}
     {#if page < last-2}<li><button class="button pagination-link" aria-label="Goto page { last }" on:click={ () => pageStore.set(last-1) }>{ last }</button></li>{/if}
   </ul>
-
+  --> 
 </nav>

@@ -4,10 +4,16 @@
     import Refresh from "./Refresh.svelte";
 </script>
 
-<div class="is-flex is-justify-content-space-between">
-    <div>
-        <PageSizeDropdown />
-        <Refresh />
+<div class="is-flex is-justify-content-space-between collection_support">
+    <div class="mt-2">
+        <PageSizeDropdown className="" />
+        <Refresh className="" />
     </div>
-    <Pagination />
+    <Pagination className="" />
 </div>
+
+<style lang="sass">
+    .collection_support
+        @media (max-width: 750px)
+            flex-direction: column-reverse
+</style>

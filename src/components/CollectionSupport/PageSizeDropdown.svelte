@@ -8,7 +8,10 @@
     POKEMON_LIST_4x 
   } from "../../constants";
 
-  let active = false, pageSize = POKEMON_LIST_1x;
+  export let 
+    className = "",
+    active = false, 
+    pageSize = POKEMON_LIST_1x;
 
   const unsubscribe = pageSizeStore.subscribe(value => pageSize = value);
 
@@ -22,7 +25,7 @@
   onDestroy(unsubscribe)
 </script>
 
-<div class="dropdown is-up {active && "is-active"}">
+<div class="dropdown is-up {active ? "is-active" : ""} {className}">
   <div class="dropdown-trigger">
     <button class="button" 
       aria-haspopup="true" aria-controls="dropdown-menu"
