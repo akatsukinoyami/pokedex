@@ -1,5 +1,4 @@
 <script lang="ts">
-  import "bulma/css/bulma.min.css";
   import { Router, Route } from "svelte-navigator";
   import { setContextClient } from '@urql/svelte';
   

@@ -13,7 +13,6 @@
     "bundle:create": "tar czf bundle.tar.gz --transform 's,^dist/,public/,' dist captain-definition Dockerfile nginx.conf",
     "bundle:delete": "rm -f bundle.tar.gz",
     "bundle:recreate": "yarn bundle:delete && yarn bundle:create"
-
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.4.2",
